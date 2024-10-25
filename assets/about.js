@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Image, View, Platform, TouchableOpacity, Text } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
+import { router, Stack } from 'expo-router';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
 export default function Screen() {
@@ -32,8 +33,21 @@ export default function Screen() {
     setSelectedImage(null);
   }
 
+  const sucesso = () => {
+    router.navigate('produtos');
+  }
+
   return (
+   
+
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Stack.Screen options={{
+        title: 'Inicio',
+        //alinhar o titulo ao centro
+        headerTitleAlign: 'center',
+        headerRight: () => <Button onPress={sucesso} title="Add" />
+      }} />
+
       
       {
         selectedImage ? (

@@ -3,7 +3,7 @@ import React from 'react';
 import { Text, View, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import LogoComponent from '../components/LogoComponent';
-export default function Screen() {
+export default function Start() {
 
     const handleLogin = () => {
         router.replace('about');
