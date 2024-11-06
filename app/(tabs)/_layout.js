@@ -14,7 +14,14 @@ export default function TabLayout() {
                 tabBarActiveTintColor: 'tomato',
                 tabBarInactiveTintColor: 'gray',
             }}
-        >
+        > 
+        <Tabs.Screen
+                name="teste"
+                options={{
+                    title: 'teste',
+                    tabBarIcon: ({ color }) => <FontAwesome name="user" size={24} color={color} />,
+                }}
+            />
             <Tabs.Screen
                 name="(home)"
                 options={{
@@ -31,6 +38,8 @@ export default function TabLayout() {
                     tabBarIcon: ({ color }) => <FontAwesome name="user" size={24} color={color} />,
                 }}
             />
+
+           
 
           
 

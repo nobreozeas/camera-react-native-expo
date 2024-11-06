@@ -12,7 +12,7 @@ export default function Screen() {
     useEffect(() => {
 
         async function loadProducts() {
-            const url = "http://172.19.6.35:3000/products";
+            const url = "https://api-produtos-6p7n.onrender.com/products";
             const response = await fetch(url);
 
 
@@ -45,7 +45,7 @@ export default function Screen() {
                             <Text>{product.descricao}</Text>
                             <Text>{product.Category.nome}</Text>
                             <Text>{product.Location.nome}</Text>
-                            <Image source={{ uri: `http://172.19.6.35:3000/${product.image}` }} style={{ width: 100, height: 100 }} />
+                            <Image source={{ uri: `https://api-produtos-6p7n.onrender.com/${product.image}` }} style={{ width: 100, height: 100 }} />
                         </View>
                     ))
                 }
